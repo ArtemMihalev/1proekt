@@ -1,0 +1,10 @@
+mesto = input()
+if mesto[0] == "1"
+    f = "Левое"
+else:
+    f = "Правое"
+if mesto[-1] == "A":
+    f = f + "Нижнее"
+else:
+    f = f + "Верхнее"
+print f
