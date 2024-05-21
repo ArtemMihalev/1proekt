@@ -34,10 +34,10 @@ def second():
     restaurant3.describe_restaurant()
 def third():
     class restaurant:
-        def __init__(self, restaurant_name, cuisine_type, rate):
+        def __init__(self, restaurant_name, cuisine_type, rating):
             self.restaurant_name = restaurant_name
             self.cuisine_type = cuisine_type
-            self.rate = rate
+            self.rating = rating
 
         def describe_restaurant(self):
             print(self.restaurant_name, " ", self.cuisine_type)
@@ -46,9 +46,8 @@ def third():
             print(self.restaurant_name, " открыт")
 
         def rate(self, new_rate):
-            self.rate = new_rate
-            print("новое значение: ", self.rate)
-    rating = int(input())
+            self.rating = new_rate
+            print("новое значение: ", self.rating)
     rest1 = restaurant("усы лисы", "итальянская",4)
-    rest1.rate(rating)
+    rest1.rate(5)
 third()
