@@ -37,14 +37,14 @@ def second():
             print("новое значение: ", self.new_rate)
 
     class icecreamstand(restaurant):
-        def __init__(self, restaurant_name, cuisine_type, type, flavors, rate, location, hours):
+        def __init__(self, restaurant_name, cuisine_type, types, flavors, rate, location, hours):
             self.rate = rate
             self.restaurant_name = restaurant_name
             self.cuisine_type = cuisine_type
             self.flavors = flavors
             self.location = location
             self.hours = hours
-            self.type = type
+            self.types = types
         def add_flavor(self, flavor):
             self.flavors.append(flavor)
         def del_flavor(self, flavor):
@@ -52,23 +52,23 @@ def second():
                 self.flavors.remove(flavor)
         def prov_flavor(self, flavor):
             return flavor in self.flavors
-        def flavors(self):
+        def spisok(self):
             print("Сорта мороженого: ")
             for flavor in self.flavors:
                 print(flavor)
         def type(self):
             print("Вид мороженого: ")
-            for flavor in self.flavors:
-                print(flavor)
+            for type in self.types:
+                print(type)
 
-    icecreamstand = icecreamstand("морожка", "мороженое", ["на палочке", "в рожке"],["банановое", "апельсиновое"], 4, "ул. Кузбасская, д. 15", "10:00 - 18:00")
+    icecreamstand1 = icecreamstand("морожка", "мороженое", ["на палочке", "в рожке"],["банановое", "апельсиновое"], 4, "ул. Кузбасская, д. 15", "10:00 - 18:00")
 
-    icecreamstand.add_flavor("Ванильное")
-    icecreamstand.add_flavor("Шоколадное")
-    icecreamstand.add_flavor("Клубничное")
+    icecreamstand1.add_flavor("Ванильное")
+    icecreamstand1.add_flavor("Шоколадное")
+    icecreamstand1.add_flavor("Клубничное")
 
-    icecreamstand.del_flavor("Клубничное")
+    icecreamstand1.del_flavor("Клубничное")
 
-    print(icecreamstand.prov_flavor("Клубничное"))
-    icecreamstand.type()
+    print(icecreamstand1.prov_flavor("Клубничное"))
+    icecreamstand1.type()
 second()
